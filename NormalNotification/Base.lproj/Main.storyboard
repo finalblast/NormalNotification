@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F1112" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="NormalNotification" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9rg-H1-ISd">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Enter a name for this image" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ZF-pe-rlM">
+                                        <rect key="frame" x="151" y="562" width="298" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="vXZ-lx-hvc" id="ImZ-ro-h3k"/>
+                                        </connections>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="987-Om-jVf">
+                                        <rect key="frame" x="151" y="0.0" width="298" height="554"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="554" id="4BT-61-XVT"/>
+                                            <constraint firstAttribute="width" constant="298" id="VWJ-5d-ioP"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="987-Om-jVf" firstAttribute="top" secondItem="9rg-H1-ISd" secondAttribute="top" id="29v-Am-EC2"/>
+                                    <constraint firstAttribute="centerX" secondItem="0ZF-pe-rlM" secondAttribute="centerX" id="2vZ-oO-Oha"/>
+                                    <constraint firstAttribute="trailing" secondItem="987-Om-jVf" secondAttribute="trailing" constant="151" id="AeU-ZF-GHk"/>
+                                    <constraint firstItem="0ZF-pe-rlM" firstAttribute="top" secondItem="987-Om-jVf" secondAttribute="bottom" constant="8" id="Kcg-Uw-xSY"/>
+                                    <constraint firstItem="987-Om-jVf" firstAttribute="leading" secondItem="9rg-H1-ISd" secondAttribute="leading" constant="151" id="NKs-tZ-HLO"/>
+                                    <constraint firstItem="987-Om-jVf" firstAttribute="top" secondItem="9rg-H1-ISd" secondAttribute="top" id="Tdn-lq-l3S"/>
+                                    <constraint firstItem="987-Om-jVf" firstAttribute="leading" secondItem="0ZF-pe-rlM" secondAttribute="leading" id="WqB-Yf-vG6"/>
+                                    <constraint firstItem="987-Om-jVf" firstAttribute="top" secondItem="9rg-H1-ISd" secondAttribute="top" id="exN-eP-6zY"/>
+                                    <constraint firstAttribute="bottom" secondItem="0ZF-pe-rlM" secondAttribute="bottom" constant="8" id="jnE-Xr-0mm"/>
+                                    <constraint firstAttribute="centerX" secondItem="987-Om-jVf" secondAttribute="centerX" id="lnN-hc-RMS"/>
+                                    <constraint firstItem="987-Om-jVf" firstAttribute="top" secondItem="9rg-H1-ISd" secondAttribute="top" id="okf-Dr-cFg"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9rg-H1-ISd" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="NfA-Yz-ymt"/>
+                            <constraint firstAttribute="centerX" secondItem="9rg-H1-ISd" secondAttribute="centerX" id="cmK-JQ-wnq"/>
+                            <constraint firstAttribute="centerY" secondItem="9rg-H1-ISd" secondAttribute="centerY" id="z4h-HU-YHl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="9rg-H1-ISd" id="0eu-eh-Zdx"/>
+                        <outlet property="textField" destination="0ZF-pe-rlM" id="UWJ-1H-slc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
